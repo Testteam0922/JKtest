@@ -1,0 +1,2983 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TS自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>TS自动化测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2017-06-30 17:09:12</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:21.331000</p>
+<p class='attribute'><strong>Status:</strong> Pass 52 Failure 13</p>
+
+<p class='description'>测试用例结果</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+    <td>Screenshot</td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_hita_query_bank_card.query_bankcard_hita</td>
+    <td>65</td>
+    <td>52</td>
+    <td>13</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',65)">Detail</a></td>
+    <td></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0001</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: 所有参数正确输入
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E59DB60B258EFF459709AD8474A9BB06'}
+请求用时:326毫秒
+actual_results:{"sign":"ABBA0E78C99EF406F1C6DE679A2915B5","message":"","timestamp":"2017-06-30 09:09:39","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0002</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: v为空
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '8479996A01D7E29CB70A10CD2650F546'}
+请求用时:294毫秒
+actual_results:{"message":"parameter v invaild","timestamp":"2017-06-30 09:09:40","result":"300","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0003</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: v输入空格
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '  ', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '29E9C63A038FFABEBB53ADEBAA6197F5'}
+请求用时:335毫秒
+actual_results:{"sign":"31A99DA434B0AD9C2B1A0340991D2CA4","message":"","timestamp":"2017-06-30 09:09:40","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0004</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: v输入数字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '001', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'D1A16464E4B24F72D952C443F0A49C36'}
+请求用时:289毫秒
+actual_results:{"sign":"31A99DA434B0AD9C2B1A0340991D2CA4","message":"","timestamp":"2017-06-30 09:09:40","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0005</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: v输入字母
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': 'Vv', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '4478D335915C28DF40B6477E657FFE02'}
+请求用时:311毫秒
+actual_results:{"sign":"4B02A6BB6775EEFB4F11DEDDA72D1D08","message":"","timestamp":"2017-06-30 09:09:41","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0006</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: v输入汉字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '\xe6\xb1\x89\xe5\xad\x97', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '1229C089EF2FF52041C5971651F76DC4'}
+请求用时:305毫秒
+actual_results:{"sign":"4B02A6BB6775EEFB4F11DEDDA72D1D08","message":"","timestamp":"2017-06-30 09:09:41","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0007</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        pass</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: v输入特殊字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '.;:"\'!@#$%^&amp;*_-', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '33E4BCC59ACA433FF2C531FA0AAA4650'}
+请求用时:298毫秒
+actual_results:{"sign":"4B02A6BB6775EEFB4F11DEDDA72D1D08","message":"","timestamp":"2017-06-30 09:09:41","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0008</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        pass</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.8: v输入15位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '100000000000005', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '2316C5910A74E98B79DC358001B6844F'}
+请求用时:330毫秒
+actual_results:{"sign":"F318A27334AA43F7B574B5049C623F07","message":"","timestamp":"2017-06-30 09:09:42","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0009</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        pass</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.9: v输入16位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '1000000000000056', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E0DB0C5EC1840B42F0B33B454D52A01F'}
+请求用时:288毫秒
+actual_results:{"sign":"F318A27334AA43F7B574B5049C623F07","message":"","timestamp":"2017-06-30 09:09:42","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0010</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+        pass</a>
+
+    <div id='div_pt1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.10: v输入17位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '10000000000000567', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E676556FCD60A56609E00F3F108B0B93'}
+请求用时:286毫秒
+actual_results:{"message":"parameter v invaild","timestamp":"2017-06-30 09:09:42","result":"300","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0011</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11')" >
+        pass</a>
+
+    <div id='div_pt1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.11: method为空
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': '', 'sign': 'E3F9BEA3AC42DD1CC66CCCF1AE5ED1B0'}
+请求用时:321毫秒
+actual_results:{"message":"parameter method invaild","timestamp":"2017-06-30 09:09:42","result":"300","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0012</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12')" >
+        pass</a>
+
+    <div id='div_pt1.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.12: method为空格
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': '  ', 'sign': '9C2AC426EAAFFCB1F66B7BBA71653C64'}
+请求用时:346毫秒
+actual_results:{"sign":"884A7C84B5599B8172D6D23C1F4ABE5D","message":"","timestamp":"2017-06-30 09:09:43","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0013</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.13')" >
+        pass</a>
+
+    <div id='div_pt1.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.13: method输入数字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': '2222222', 'sign': 'EA92D8967E92A5DAB54A2FC922D6AFE0'}
+请求用时:339毫秒
+actual_results:{"sign":"884A7C84B5599B8172D6D23C1F4ABE5D","message":"","timestamp":"2017-06-30 09:09:43","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0014</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.14')" >
+        pass</a>
+
+    <div id='div_pt1.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.14: method输入字母
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E59DB60B258EFF459709AD8474A9BB06'}
+请求用时:350毫秒
+actual_results:{"sign":"5E1330779F3C6A39578E0E86639AFF0C","message":"","timestamp":"2017-06-30 09:09:44","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0015</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.15')" >
+        pass</a>
+
+    <div id='div_pt1.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.15: method输入汉字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': '\xe6\xb1\x89\xe5\xad\x97', 'sign': '8FC9DCD179BD9767273838F174355FFE'}
+请求用时:334毫秒
+actual_results:{"sign":"5E1330779F3C6A39578E0E86639AFF0C","message":"","timestamp":"2017-06-30 09:09:44","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0016</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.16')" >
+        pass</a>
+
+    <div id='div_pt1.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.16: method输入特殊字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': '.;:"\'!@#$%^&amp;*_-', 'sign': 'BF90A6B03A7B4E4E8D2217FA5C901344'}
+请求用时:333毫秒
+actual_results:{"sign":"5E1330779F3C6A39578E0E86639AFF0C","message":"","timestamp":"2017-06-30 09:09:44","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0017</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.17')" >
+        pass</a>
+
+    <div id='div_pt1.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.17: method输入31位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'createOrder00000000000000000001', 'sign': 'A9C03B86C1101D3CC7683A9A226D311F'}
+请求用时:386毫秒
+actual_results:{"sign":"1EA7592F92822B4BB860798FEF2ACE7B","message":"","timestamp":"2017-06-30 09:09:45","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0018</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.18')" >
+        pass</a>
+
+    <div id='div_pt1.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.18: method输入32位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'createOrder000000000000000000012', 'sign': '45128CE6ADD549CD0FA8FAD725D2A902'}
+请求用时:339毫秒
+actual_results:{"sign":"1EA7592F92822B4BB860798FEF2ACE7B","message":"","timestamp":"2017-06-30 09:09:45","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.19' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0019</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.19')" >
+        pass</a>
+
+    <div id='div_pt1.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.19: method输入33位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'createOrder0000000000000000000123', 'sign': '7ABAFE31541A6DAB6E2211DC85F2927B'}
+请求用时:353毫秒
+actual_results:{"message":"parameter method invaild","timestamp":"2017-06-30 09:09:45","result":"300","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.20' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0020</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.20')" >
+        pass</a>
+
+    <div id='div_pt1.20' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.20').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.20: appid为空
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '', 'method': 'queryBankCard', 'sign': 'CFBB2C11738BCA27660C24C0CE41C0E6'}
+请求用时:365毫秒
+actual_results:{"message":"parameter appid invaild","timestamp":"2017-06-30 09:09:46","result":"302","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.21' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0021</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.21')" >
+        pass</a>
+
+    <div id='div_pt1.21' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.21').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.21: appid输入空格
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '  ', 'method': 'queryBankCard', 'sign': 'A9C1D57406C346043B9D12A7700C0482'}
+请求用时:347毫秒
+actual_results:{"message":"appid not found","timestamp":"2017-06-30 09:09:46","result":"302","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.22' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0022</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.22')" >
+        pass</a>
+
+    <div id='div_pt1.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.22: appid输入数字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '12312313', 'method': 'queryBankCard', 'sign': '51C8A4F27886872456F24197A76180B2'}
+请求用时:358毫秒
+actual_results:{"message":"appid not found","timestamp":"2017-06-30 09:09:46","result":"302","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.23' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0023</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.23')" >
+        pass</a>
+
+    <div id='div_pt1.23' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.23').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.23: appid输入字母
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': 'aaaAAA', 'method': 'queryBankCard', 'sign': '38767E5B28CF3D4A23C4A47A02F28B4C'}
+请求用时:319毫秒
+actual_results:{"message":"appid not found","timestamp":"2017-06-30 09:09:47","result":"302","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.24' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0024</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.24')" >
+        pass</a>
+
+    <div id='div_pt1.24' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.24').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.24: appid输入汉字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '\xe6\xb1\x89\xe5\xad\x97', 'method': 'queryBankCard', 'sign': 'ED8164F1596EAB8682954519801D4253'}
+请求用时:353毫秒
+actual_results:{"message":"appid not found","timestamp":"2017-06-30 09:09:47","result":"302","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.25' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0025</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.25')" >
+        pass</a>
+
+    <div id='div_pt1.25' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.25').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.25: appid输入特殊字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '.;:"\'!@#$%^&amp;*_-', 'method': 'queryBankCard', 'sign': 'A17C1C7C2A0E31AFEE8A8EC2A5A19101'}
+请求用时:358毫秒
+actual_results:{"message":"appid not found","timestamp":"2017-06-30 09:09:47","result":"302","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.26' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0026</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.26')" >
+        pass</a>
+
+    <div id='div_pt1.26' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.26').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.26: appid输入1000001
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000001', 'method': 'queryBankCard', 'sign': '3FFA171843D6B76C796A1DAF8196F307'}
+请求用时:343毫秒
+actual_results:{"message":"appid not found","timestamp":"2017-06-30 09:09:48","result":"302","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.27' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0027</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.27')" >
+        fail</a>
+
+    <div id='div_ft1.27' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.27').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.27: appid输入1000002
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000002', 'method': 'queryBankCard', 'sign': '15957068BC9D8D25E6A5CD4275F5CAD4'}
+请求用时:337毫秒
+actual_results:{"sign":"43100EAD938B45D52FDB8D3D5393269F","message":"","timestamp":"2017-06-30 09:09:48","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+"message":"appid not found" not find
+"result":"302" not find
+"body":{} not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 159, in test_case_0027
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.28' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0028</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.28')" >
+        pass</a>
+
+    <div id='div_pt1.28' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.28').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.28: appid输入15位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '100000300000005', 'method': 'queryBankCard', 'sign': '0BC1D2F5417417B8A07A69C8380D536A'}
+请求用时:344毫秒
+actual_results:{"message":"appid not found","timestamp":"2017-06-30 09:09:48","result":"302","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.29' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0029</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.29')" >
+        pass</a>
+
+    <div id='div_pt1.29' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.29').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.29: appid输入16位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003000000056', 'method': 'queryBankCard', 'sign': '1B76578CCDCAD3F372DD0DFF89698130'}
+请求用时:333毫秒
+actual_results:{"message":"appid not found","timestamp":"2017-06-30 09:09:49","result":"302","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.30' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0030</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.30')" >
+        pass</a>
+
+    <div id='div_pt1.30' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.30').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.30: sign_type输入空格
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': '  ', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'ED2EF0C924D44B1A09323A6BE5F2DC69'}
+请求用时:333毫秒
+actual_results:{"sign":"E4536C34B8A59B5ABB2D894732B058D6","message":"","timestamp":"2017-06-30 09:09:49","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.31' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0031</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.31')" >
+        pass</a>
+
+    <div id='div_pt1.31' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.31').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.31: timestamp为空
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'C95D37DFE650756C5858ACB801B38DFA'}
+请求用时:295毫秒
+actual_results:{"message":"parameter timestamp invaild","timestamp":"2017-06-30 09:09:49","result":"300","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.32' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0032</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.32')" >
+        pass</a>
+
+    <div id='div_pt1.32' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.32').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.32: timestamp输入空格
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '  ', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'CB9561867609D9D996EE45412A1E36B3'}
+请求用时:330毫秒
+actual_results:{"sign":"091DE4ED2BC4EB79FB8E6539F505298D","message":"","timestamp":"2017-06-30 09:09:50","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.33' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0033</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.33')" >
+        pass</a>
+
+    <div id='div_pt1.33' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.33').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.33: timestamp输入数字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '20170607111111', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'BC0B52EFE3C3F2C69C1128F49129DB3D'}
+请求用时:295毫秒
+actual_results:{"sign":"091DE4ED2BC4EB79FB8E6539F505298D","message":"","timestamp":"2017-06-30 09:09:50","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.34' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0034</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.34')" >
+        pass</a>
+
+    <div id='div_pt1.34' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.34').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.34: timestamp输入字母
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': 'timeTIME', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '43363AE76450F24BB7DAB14FD4B88FA5'}
+请求用时:311毫秒
+actual_results:{"sign":"091DE4ED2BC4EB79FB8E6539F505298D","message":"","timestamp":"2017-06-30 09:09:50","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.35' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0035</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.35')" >
+        pass</a>
+
+    <div id='div_pt1.35' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.35').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.35: timestamp输入汉字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '\xe6\xb1\x89\xe5\xad\x97', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '68907EB73A0311E4F610FACFA847FDD8'}
+请求用时:341毫秒
+actual_results:{"sign":"2FF085FEA1DD4EDF371FF3A95251CE2C","message":"","timestamp":"2017-06-30 09:09:51","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.36' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0036</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.36')" >
+        pass</a>
+
+    <div id='div_pt1.36' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.36').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.36: timestamp输入特殊字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '.;:"\'!@#$%^&amp;*_-', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '3A9870471D3CDEE1FB6D859A527F63FC'}
+请求用时:327毫秒
+actual_results:{"sign":"2FF085FEA1DD4EDF371FF3A95251CE2C","message":"","timestamp":"2017-06-30 09:09:51","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.37' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0037</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.37')" >
+        pass</a>
+
+    <div id='div_pt1.37' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.37').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.37: timestamp输入规定的格式
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E59DB60B258EFF459709AD8474A9BB06'}
+请求用时:316毫秒
+actual_results:{"sign":"2FF085FEA1DD4EDF371FF3A95251CE2C","message":"","timestamp":"2017-06-30 09:09:51","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.38' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0038</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.38')" >
+        pass</a>
+
+    <div id='div_pt1.38' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.38').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.38: timestamp输入19位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-07  11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'CED059B47E3E14A85C02B3800EE3E373'}
+请求用时:311毫秒
+actual_results:{"message":"parameter timestamp invaild","timestamp":"2017-06-30 09:09:52","result":"300","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.39' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0039</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.39')" >
+        pass</a>
+
+    <div id='div_pt1.39' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.39').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.39: sign_type为空
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': '', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'FC4ED37D80882F87244A1922A4DE243F'}
+请求用时:327毫秒
+actual_results:{"message":"parameter sign_type invaild","timestamp":"2017-06-30 09:09:52","result":"300","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.40' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0040</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.40')" >
+        pass</a>
+
+    <div id='div_pt1.40' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.40').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.40: sign_type输入空格
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': '  ', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'ED2EF0C924D44B1A09323A6BE5F2DC69'}
+请求用时:333毫秒
+actual_results:{"sign":"466ACDF49B8FFE05CB0B8CC159605812","message":"","timestamp":"2017-06-30 09:09:52","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.41' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0041</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.41')" >
+        pass</a>
+
+    <div id='div_pt1.41' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.41').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.41: sign_type输入数字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': '222222', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '1D482B706BC0D5754C6D9D5AEEE4E4A2'}
+请求用时:326毫秒
+actual_results:{"sign":"94A6E3E8DED68AADF7A3C46DB0825C64","message":"","timestamp":"2017-06-30 09:09:53","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.42' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0042</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.42')" >
+        pass</a>
+
+    <div id='div_pt1.42' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.42').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.42: sign_type输入字母
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'MMDDmd', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '2FF2EA09F2159DC00C2C5B5B7FAEF6CD'}
+请求用时:351毫秒
+actual_results:{"sign":"94A6E3E8DED68AADF7A3C46DB0825C64","message":"","timestamp":"2017-06-30 09:09:53","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.43' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0043</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.43')" >
+        pass</a>
+
+    <div id='div_pt1.43' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.43').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.43: sign_type输入汉字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': '\xe6\xb1\x89\xe5\xad\x97', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'EF1DD32509408157AF8FFCEFA8D3FA05'}
+请求用时:332毫秒
+actual_results:{"sign":"94A6E3E8DED68AADF7A3C46DB0825C64","message":"","timestamp":"2017-06-30 09:09:53","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.44' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0044</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.44')" >
+        pass</a>
+
+    <div id='div_pt1.44' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.44').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.44: sign_type输入特殊字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': '.;:"\'!@#$%^&amp;*_-', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'FD0D931843E075D71D6C5EB962696F48'}
+请求用时:318毫秒
+actual_results:{"sign":"B20FDDCADA35E579016FA729E511578F","message":"","timestamp":"2017-06-30 09:09:54","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.45' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0045</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.45')" >
+        pass</a>
+
+    <div id='div_pt1.45' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.45').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.45: sign_type输入15位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5000000000005', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E7918AA0705AEE08583E6CB3FAC62AB5'}
+请求用时:311毫秒
+actual_results:{"sign":"B20FDDCADA35E579016FA729E511578F","message":"","timestamp":"2017-06-30 09:09:54","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.46' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0046</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.46')" >
+        pass</a>
+
+    <div id='div_pt1.46' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.46').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.46: sign_type输入16位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md50000000000056', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'F35D8DA379222C187A880B6DD54B1924'}
+请求用时:335毫秒
+actual_results:{"sign":"B20FDDCADA35E579016FA729E511578F","message":"","timestamp":"2017-06-30 09:09:54","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.47' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0047</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.47')" >
+        fail</a>
+
+    <div id='div_ft1.47' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.47').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.47: sign_type输入17位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md500000000000567', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'CF06B3C2EEA0447A5EE67D7927F2CE1D'}
+请求用时:350毫秒
+actual_results:{"sign":"D98AABFC0040903A47D6525B23601F06","message":"","timestamp":"2017-06-30 09:09:55","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+"message":"parameter sign_type invaild" not find
+"result":"300" not find
+"body":{} not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 259, in test_case_0047
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.48' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0048</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.48')" >
+        pass</a>
+
+    <div id='div_pt1.48' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.48').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.48: transfer_type为空
+{'body': '{"transfer_type":"","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E0FAF745EBD4EEBA3CD8BFC9D693DFAF'}
+请求用时:317毫秒
+actual_results:{"message":"transfer_type can not be blank","timestamp":"2017-06-30 09:09:55","result":"transfer_type blank","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.49' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0049</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.49')" >
+        fail</a>
+
+    <div id='div_ft1.49' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.49').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.49: transfer_type输入空格
+{'body': '{"transfer_type":"   ","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '6D6299D11E3314E5983964704A9EC474'}
+请求用时:317毫秒
+actual_results:{"sign":"BD25E48820FD05311503745BDB26FBC5","message":"","timestamp":"2017-06-30 09:09:55","result":"0","body":{"message":"","bankCardList":[],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+"message":"transfer_type can not be blank" not find
+"result":"transfer_type blank" not find
+"body":{} not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 269, in test_case_0049
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.50' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0050</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.50')" >
+        fail</a>
+
+    <div id='div_ft1.50' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.50').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.50: transfer_type输入数字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E59DB60B258EFF459709AD8474A9BB06'}
+请求用时:324毫秒
+actual_results:{"sign":"487E6B378B66E627C9CB4D26160C5411","message":"","timestamp":"2017-06-30 09:09:56","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+"message":"transfer_type can not be blank" not find
+"result":"transfer_type blank" not find
+"body":{} not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 274, in test_case_0050
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.51' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0051</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.51')" >
+        fail</a>
+
+    <div id='div_ft1.51' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.51').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.51: transfer_type输入字母
+{'body': '{"transfer_type":"a","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'DB4978AA20C8A810E518E09EA1BACF3F'}
+请求用时:315毫秒
+actual_results:{"sign":"325DB59A555FD6018E9666D0CF797D65","message":"","timestamp":"2017-06-30 09:09:56","result":"0","body":{"message":"","bankCardList":[],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+"message":"transfer_type can not be blank" not find
+"result":"transfer_type blank" not find
+"body":{} not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 279, in test_case_0051
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.52' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0052</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.52')" >
+        fail</a>
+
+    <div id='div_ft1.52' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.52').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.52: transfer_type输入汉字
+{'body': '{"transfer_type":"\xe6\xb1\x89","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'CD39622F6A550541E00559C6B3582B7D'}
+请求用时:300毫秒
+actual_results:{"sign":"325DB59A555FD6018E9666D0CF797D65","message":"","timestamp":"2017-06-30 09:09:56","result":"0","body":{"message":"","bankCardList":[],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+"message":"transfer_type can not be blank" not find
+"result":"transfer_type blank" not find
+"body":{} not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 284, in test_case_0052
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.53' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0053</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.53')" >
+        fail</a>
+
+    <div id='div_ft1.53' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.53').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.53: transfer_type输入特殊字符
+{'body': '{"transfer_type":".;:"\'!@#$%^&amp;*_-",operator_id:"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E38D89AFEA823EAB39A50F2F25736B64'}
+请求用时:308毫秒
+actual_results:&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/&gt;
+&lt;title&gt;Error 500 com.alibaba.fastjson.JSONException: syntax error, position at 0, name transfer_type&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 500&lt;/h2&gt;
+&lt;p&gt;Problem accessing /ts/queryBankCard.do. Reason:
+&lt;pre&gt;    com.alibaba.fastjson.JSONException: syntax error, position at 0, name transfer_type&lt;/pre&gt;&lt;/p&gt;&lt;h3&gt;Caused by:&lt;/h3&gt;&lt;pre&gt;org.jboss.resteasy.spi.UnhandledException: com.alibaba.fastjson.JSONException: syntax error, position at 0, name transfer_type
+	at org.jboss.resteasy.core.ExceptionHandler.handleApplicationException(ExceptionHandler.java:76)
+	at org.jboss.resteasy.core.ExceptionHandler.handleException(ExceptionHandler.java:212)
+	at org.jboss.resteasy.core.SynchronousDispatcher.writeException(SynchronousDispatcher.java:149)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:372)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:179)
+	at org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:220)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:56)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at com.alibaba.dubbo.rpc.protocol.rest.DubboHttpServer$RestHandler.handle(DubboHttpServer.java:86)
+	at com.alibaba.dubbo.remoting.http.servlet.DispatcherServlet.service(DispatcherServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:401)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:945)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:756)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: com.alibaba.fastjson.JSONException: syntax error, position at 0, name transfer_type
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:502)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1236)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.JSON.parse(JSON.java:108)
+	at com.alibaba.fastjson.JSON.parse(JSON.java:99)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:170)
+	at com.counect.hita.ts.service.impl.QueryBankCardServiceImpl.queryBankCard(QueryBankCardServiceImpl.java:120)
+	at com.alibaba.dubbo.common.bytecode.Wrapper13.invokeMethod(Wrapper13.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:70)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:132)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:52)
+	at com.alibaba.dubbo.common.bytecode.proxy6.queryBankCard(proxy6.java)
+	at sun.reflect.GeneratedMethodAccessor265.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:137)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:288)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:242)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:229)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:356)
+	... 21 more
+&lt;/pre&gt;
+&lt;h3&gt;Caused by:&lt;/h3&gt;&lt;pre&gt;com.alibaba.fastjson.JSONException: syntax error, position at 0, name transfer_type
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:502)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1236)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.JSON.parse(JSON.java:108)
+	at com.alibaba.fastjson.JSON.parse(JSON.java:99)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:170)
+	at com.counect.hita.ts.service.impl.QueryBankCardServiceImpl.queryBankCard(QueryBankCardServiceImpl.java:120)
+	at com.alibaba.dubbo.common.bytecode.Wrapper13.invokeMethod(Wrapper13.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:70)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:132)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:52)
+	at com.alibaba.dubbo.common.bytecode.proxy6.queryBankCard(proxy6.java)
+	at sun.reflect.GeneratedMethodAccessor265.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:137)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:288)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:242)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:229)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:356)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:179)
+	at org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:220)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:56)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at com.alibaba.dubbo.rpc.protocol.rest.DubboHttpServer$RestHandler.handle(DubboHttpServer.java:86)
+	at com.alibaba.dubbo.remoting.http.servlet.DispatcherServlet.service(DispatcherServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:401)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:945)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:756)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+&lt;/pre&gt;
+&lt;hr /&gt;&lt;i&gt;&lt;small&gt;Powered by Jetty://&lt;/small&gt;&lt;/i&gt;&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+"message":"parameter transfer_type invaild" not find
+timestamp not find
+"result":"300" not find
+"body":{} not find
+"v":"0.0.1" not find
+"sign_type":"md5" not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 289, in test_case_0053
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.54' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0054</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.54')" >
+        fail</a>
+
+    <div id='div_ft1.54' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.54').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.54: transfer_type输入1（提现）
+{'body': '{"transfer_type":"1","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '909B493542D552337A8CB3BFA8EAF2DF'}
+请求用时:345毫秒
+actual_results:{"sign":"C3B1FAF059EFEE7E2DE8763033407E5A","message":"","timestamp":"2017-06-30 09:09:57","result":"0","body":{"message":"","bankCardList":[],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+last_update_time not find
+bank_name not find
+remark not find
+transfer_type not find
+bank_account_number not find
+mobile not find
+bank_account_name not find
+branch_name not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 294, in test_case_0054
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.55' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0055</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.55')" >
+        pass</a>
+
+    <div id='div_pt1.55' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.55').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.55: transfer_type输入2（兑换）
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E59DB60B258EFF459709AD8474A9BB06'}
+请求用时:331毫秒
+actual_results:{"sign":"FE4CB8A6B4DB9DF1720F95AA7243A623","message":"","timestamp":"2017-06-30 09:09:57","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.56' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0056</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.56')" >
+        fail</a>
+
+    <div id='div_ft1.56' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.56').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.56: transfer_type2位字符
+{'body': '{"transfer_type":"01","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '242C6D7F78CD264A867ABC280A646EBA'}
+请求用时:328毫秒
+actual_results:{"sign":"C3B1FAF059EFEE7E2DE8763033407E5A","message":"","timestamp":"2017-06-30 09:09:57","result":"0","body":{"message":"","bankCardList":[],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+"message":"parameter transfer_type invaild" not find
+"result":"300" not find
+"body":{} not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 304, in test_case_0056
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.57' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0057</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.57')" >
+        pass</a>
+
+    <div id='div_pt1.57' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.57').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.57: operator_id为空
+{'body': '{"transfer_type":"2","operator_id":""}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '3BAE71B1E2C452558A09B54ED4790405'}
+请求用时:319毫秒
+actual_results:{"message":"operator_id can not be blank","timestamp":"2017-06-30 09:09:58","result":"operator_id blank","body":{},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.58' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0058</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.58')" >
+        pass</a>
+
+    <div id='div_pt1.58' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.58').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.58: operator_id输入空格
+{'body': '{"transfer_type":"2","operator_id":"  "}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '187BB63768CEA2509454E84392776AC5'}
+请求用时:325毫秒
+actual_results:{"sign":"3548973260D124EB9830E859963FF64B","message":"","timestamp":"2017-06-30 09:09:58","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:58:11.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"  ","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.59' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0059</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.59')" >
+        pass</a>
+
+    <div id='div_pt1.59' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.59').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.59: operator_id输入数字
+{'body': '{"transfer_type":"2","operator_id":"openid300103"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'E59DB60B258EFF459709AD8474A9BB06'}
+请求用时:322毫秒
+actual_results:{"sign":"394C58CB5CCDCBB017D806C50E914502","message":"","timestamp":"2017-06-30 09:09:58","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:57:26.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"openid300103","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.60' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0060</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.60')" >
+        pass</a>
+
+    <div id='div_pt1.60' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.60').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.60: operator_id输入字母
+{'body': '{"transfer_type":"2","operator_id":"AAAaaa"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '39DFBBEEAE5CEFBA63F1EACFF6425AED'}
+请求用时:311毫秒
+actual_results:{"sign":"AAFBB48A3C91A46ED91C7965660B8338","message":"","timestamp":"2017-06-30 09:09:59","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:58:12.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"AAAaaa","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='pt1.61' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case_0061</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.61')" >
+        pass</a>
+
+    <div id='div_pt1.61' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.61').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.61: operator_id输入汉字
+{'body': '{"transfer_type":"2","operator_id":"\xe6\xb1\x89\xe5\xad\x97"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'F02F8D3D561DEDDE5C00F137C51B5458'}
+请求用时:331毫秒
+actual_results:{"sign":"51288D5C2B26D6967D331F60FE53BF68","message":"","timestamp":"2017-06-30 09:09:59","result":"0","body":{"message":"","bankCardList":[{"last_update_time":"2017-06-30 16:58:12.0","bank_name":"收货地址","remark":"","transfer_type":"2","bank_account_number":"62221231231232232","mobile":"","bank_account_name":"张三","branch_name":"收货详细地址"}],"operator_id":"汉字","code":"0"},"v":"0.0.1","sign_type":"md5"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.62' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0062</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.62')" >
+        fail</a>
+
+    <div id='div_ft1.62' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.62').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.62: operator_id输入特殊字符
+{'body': '{"transfer_type":"2","operator_id":".;:"\'!@#$%^&amp;*_-"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'DD8EF01C1D9F426573FB203DD738B7C9'}
+请求用时:346毫秒
+actual_results:&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/&gt;
+&lt;title&gt;Error 500 com.alibaba.fastjson.JSONException: syntax error, position at 0, name operator_id&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;h2&gt;HTTP ERROR 500&lt;/h2&gt;
+&lt;p&gt;Problem accessing /ts/queryBankCard.do. Reason:
+&lt;pre&gt;    com.alibaba.fastjson.JSONException: syntax error, position at 0, name operator_id&lt;/pre&gt;&lt;/p&gt;&lt;h3&gt;Caused by:&lt;/h3&gt;&lt;pre&gt;org.jboss.resteasy.spi.UnhandledException: com.alibaba.fastjson.JSONException: syntax error, position at 0, name operator_id
+	at org.jboss.resteasy.core.ExceptionHandler.handleApplicationException(ExceptionHandler.java:76)
+	at org.jboss.resteasy.core.ExceptionHandler.handleException(ExceptionHandler.java:212)
+	at org.jboss.resteasy.core.SynchronousDispatcher.writeException(SynchronousDispatcher.java:149)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:372)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:179)
+	at org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:220)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:56)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at com.alibaba.dubbo.rpc.protocol.rest.DubboHttpServer$RestHandler.handle(DubboHttpServer.java:86)
+	at com.alibaba.dubbo.remoting.http.servlet.DispatcherServlet.service(DispatcherServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:401)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:945)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:756)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: com.alibaba.fastjson.JSONException: syntax error, position at 0, name operator_id
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:502)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1236)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.JSON.parse(JSON.java:108)
+	at com.alibaba.fastjson.JSON.parse(JSON.java:99)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:170)
+	at com.counect.hita.ts.service.impl.QueryBankCardServiceImpl.queryBankCard(QueryBankCardServiceImpl.java:120)
+	at com.alibaba.dubbo.common.bytecode.Wrapper13.invokeMethod(Wrapper13.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:70)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:132)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:52)
+	at com.alibaba.dubbo.common.bytecode.proxy6.queryBankCard(proxy6.java)
+	at sun.reflect.GeneratedMethodAccessor265.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:137)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:288)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:242)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:229)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:356)
+	... 21 more
+&lt;/pre&gt;
+&lt;h3&gt;Caused by:&lt;/h3&gt;&lt;pre&gt;com.alibaba.fastjson.JSONException: syntax error, position at 0, name operator_id
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:502)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1236)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.JSON.parse(JSON.java:108)
+	at com.alibaba.fastjson.JSON.parse(JSON.java:99)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:170)
+	at com.counect.hita.ts.service.impl.QueryBankCardServiceImpl.queryBankCard(QueryBankCardServiceImpl.java:120)
+	at com.alibaba.dubbo.common.bytecode.Wrapper13.invokeMethod(Wrapper13.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:70)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:132)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:52)
+	at com.alibaba.dubbo.common.bytecode.proxy6.queryBankCard(proxy6.java)
+	at sun.reflect.GeneratedMethodAccessor265.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:137)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:288)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:242)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:229)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:356)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:179)
+	at org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:220)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:56)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at com.alibaba.dubbo.rpc.protocol.rest.DubboHttpServer$RestHandler.handle(DubboHttpServer.java:86)
+	at com.alibaba.dubbo.remoting.http.servlet.DispatcherServlet.service(DispatcherServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:401)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:945)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:756)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+&lt;/pre&gt;
+&lt;hr /&gt;&lt;i&gt;&lt;small&gt;Powered by Jetty://&lt;/small&gt;&lt;/i&gt;&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+&lt;br/&gt;                                                
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+sign not find
+message not find
+timestamp not find
+result not find
+message not find
+bankCardList not find
+last_update_time not find
+bank_name not find
+remark not find
+transfer_type not find
+bank_account_number not find
+mobile not find
+bank_account_name not find
+branch_name not find
+sign_type not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 334, in test_case_0062
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.63' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0063</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.63')" >
+        fail</a>
+
+    <div id='div_ft1.63' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.63').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.63: operator_id输入31位字符
+{'body': '{"transfer_type":"2","operator_id":"openid3001030000000000000000000000001"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': 'EC3851D5AF514F9B1D92271CFEC59855'}
+请求用时:321毫秒
+actual_results:{"sign":"044938035FD3A2526C40B79E5E7466CF","message":"","timestamp":"2017-06-30 09:10:00","result":"0","body":{"message":"","bankCardList":[],"operator_id":"openid3001030000000000000000000000001","code":"0"},"v":"0.0.1","sign_type":"md5"}
+last_update_time not find
+bank_name not find
+remark not find
+transfer_type not find
+bank_account_number not find
+mobile not find
+bank_account_name not find
+branch_name not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 339, in test_case_0063
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.64' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0064</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.64')" >
+        fail</a>
+
+    <div id='div_ft1.64' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.64').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.64: operator_id输入32位字符
+{'body': '{"transfer_type":"2","operator_id":"openid30010300000000000000000000000012"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '43660BBDE83F0BB4713CF748F2465629'}
+请求用时:336毫秒
+actual_results:{"sign":"1AC665D87E91B2D0062A2B358586836A","message":"","timestamp":"2017-06-30 09:10:00","result":"0","body":{"message":"","bankCardList":[],"operator_id":"openid30010300000000000000000000000012","code":"0"},"v":"0.0.1","sign_type":"md5"}
+last_update_time not find
+bank_name not find
+remark not find
+transfer_type not find
+bank_account_number not find
+mobile not find
+bank_account_name not find
+branch_name not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 344, in test_case_0064
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='ft1.65' class='none'>
+    <td class='failCase'><div class='testcase'>test_case_0065</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.65')" >
+        fail</a>
+
+    <div id='div_ft1.65' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.65').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.65: operator_id输入33位字符
+{'body': '{"transfer_type":"2","operator_id":"openid300103000000000000000000000000123"}', 'v': '0.0.1', 'sign_type': 'md5', 'timestamp': '2017-06-13 11:11:11', 'appid': '1000003', 'method': 'queryBankCard', 'sign': '7A3499DA2034F0F040C94D8E46326E85'}
+请求用时:326毫秒
+actual_results:{"sign":"C45A8DE7CC8E6BABA523D92BB45DD9DA","message":"","timestamp":"2017-06-30 09:10:00","result":"0","body":{"message":"","bankCardList":[],"operator_id":"openid300103000000000000000000000000123","code":"0"},"v":"0.0.1","sign_type":"md5"}
+"message":"parameter operator_id invaild" not find
+"result":"300" not find
+"body":{} not find
+Traceback (most recent call last):
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 349, in test_case_0065
+    self.resultsComparison(res,i)
+  File "D:\GITProjects\HIPAY\TS_inject_Test\test_case\test_hita_query_bank_card.py", line 410, in resultsComparison
+    assert 0,u'this case fail'
+AssertionError: this case fail
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='center'>
+
+    <a href="" title="">
+
+    <img src="D:\JiaoBenTest\HiPAYTest\Report\data\img.png" height=30 width=30 border=0 /></a>
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>65</td>
+    <td>52</td>
+    <td>13</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
