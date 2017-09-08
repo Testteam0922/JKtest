@@ -1,0 +1,19 @@
+﻿<?xml version ="1.0" encoding="UTF-8"?>
+<project name="hipay_selenium_ant" default="run" basedir=".">
+    <description>ANT for hipay selenium script!</description>
+    <target name="run">
+        <exec executable="python" failonerror="true">
+            <arg value="all_test.py" />
+        </exec>
+    </target>    
+    <target name="clean">
+		<delete includeEmptyDirs="true"> 
+       		<fileset dir="." includes="**/*.pyc" /> 
+		</delete>       	
+    </target>
+    <target name="cleanreport">
+        <delete includeEmptyDirs="true">
+            <fileset dir="." includes="**/Report/*.html" />
+        </delete>
+    </target>
+</project>

@@ -1,0 +1,14 @@
+﻿Python Version 2.7
+================================================
+Need selenium
+pip install selenium
+
+Need SendKeys
+pip install SendKeys
+
+Need HTMLTestRunner
+Puts tools/HTMLTestRunner.py in ${python}/Lib
+
+================================================
+In conf/gl_config.py pic_path maybe need modify 
+================================================
