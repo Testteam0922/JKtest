@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)http://lackar.com/aa/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="http://lackar.com/aa/favicon.ico">
+<!--<script type="text/javascript" src="//use.typekit.net/cyg8ujn.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+
+	
+<style type="text/css">
+  	 /* @font-face {
+  font-family: NuvoMediumWOFF;
+  src: url(nuvo-medium-woff-demo.woff) format("woff");
+       
+}*/
+		body{
+			background: #2B2B2B;
+font-family: "Lucida Grande","ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+		}
+	::selection {
+    	background:#00B388;
+    	color:#fff;
+	}
+	.kw input::selection {
+    	background:#00B388;
+    	color:#fff;
+	}
+	a:link {color: #00B388}
+	a:visited {color: #00B388}
+	a:hover {color: #74D6C2} 
+
+  	  .content{
+		position: ;
+  	  	margin: 17% 0 0 0;
+  	  	width:100%;
+  	  	height: auto;
+  	  	float: left;
+  	  	font-family: "Lucida Grande","ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	
+ 	  }
+  	  .kw{
+  	  	display:inline-block;
+  	  	height: ;
+  	  	width:19%; 
+  	  	vertical-align: top;
+  	  	margin-top: 56px;
+  	  	margin-left: 4px;
+  	  	position: fixed;
+  	  }
+
+  	  .kw input{
+  	  	width:100%; 
+  	  	height:48px; 
+  	  	font-size:26px;
+  	  	color: white;
+  	  	border-width: 0px;
+  	  	border-radius: 30px;
+  	  	background-color: #3F3F3F;
+  	  	padding-left: 14px;
+  	  	padding-right: 14px;
+  	  	padding-top: 6px;
+  	  	font-family: "Lucida Grande","ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", sans-serif;
+  	  	outline: none;
+  	  }
+
+  	  .searchicon{
+  	  	z-index: 2;
+  	  	position: absolute;
+		margin-left: 87%;
+  	  }
+
+  	  .info{
+  	  	position: fixed;
+  	  	bottom: 4%;
+  	  	width:19%; 
+  	  	font-family:"Lucida Grande","ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	font-size: 9pt; 
+  	  	color: #6F6F6F;
+
+
+  	  }
+  	  .popular{
+            float: left;
+            position: relative;
+           display: inline-block;
+           width: 7%;
+           margin-left: 23%;
+           padding-top: 14px;
+  	  }
+  	  .entrances{
+  	  	display: inline-block;
+  	  	vertical-align: top;
+  	  	width: 70%;
+        float: left;
+       position: relative;
+  	  	/*background: blue;*/
+  	  }
+  	  .catalog{
+  	  	float: left;
+  	  	width: 160px;
+  	  	background: #2B2B2B;
+  	  	height: 328px;
+  	  	position: relative;
+  	  	margin: 0px 6px 80px 6px;
+  	  	padding-top: 14px;
+  	  }
+  	  .catalogname{
+  	  	font-size: 14pt;
+  	  	font-weight: 500;
+  	  	text-align: center;
+        height:34px;
+  	  	margin: 0;
+  	  	color: #00B388;
+  	  
+  	  	font-family:"Lucida Grande","ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  }
+  	  .pop{
+  	  	display:inline-block;
+  	  	
+  	  	width:40px;
+  	  	height:40px;
+  	  	border-radius: 20px;
+  	  	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 1);
+  	  	border: 6px white;
+  	  }
+  	  .more_list {
+  	  	background: #333333;
+  	  	position: absolute;
+  	  	z-index: 2;
+  	  	height: auto;
+  	  	box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.2),
+			  	  	0px -1px 0px #333,
+  	  				4px 4px 10px rgba(0, 0, 0, 0.2),
+  	  				0px 4px 10px rgba(0, 0, 0, 0.2);
+  	  }
+
+  	  .top{
+  	  	text-align: center;
+
+  	  }
+
+  	  .top img {
+  	  	cursor: pointer;
+  	  }
+
+  	  .topicon{
+  	  	display:inline-block;
+  	  	
+  	  	width:70px;
+  	  	height: 70px;
+  	  	border-radius: 35px;
+  	  	box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 1);
+  	  	border: 6px white;
+  	  }
+  	  .topname{
+  	  	display:block;
+        margin: 6px 0 0 0;
+        height: 24px;
+  	  	font-size: 10pt;
+  	  	font-weight: 100;
+  	  	font-family:"Lucida Grande","ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	color: white;
+  	  	
+  	  }
+  	  .catalog .sub{
+  	  	display:inline-block;
+  	  	width:160px;
+  	  	margin-top: 0px;
+  	  	height: 32px;
+  	  	display:block;
+  	  	position: relative;
+  	  }
+
+
+  	  .subicon{
+  	  	display:inline-block;
+  	  	width: 24px;
+  	  	height: 24px;
+  	  	border-radius: 12px;
+  	  	box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 1);
+  	  	margin: 4px 0 0 16px;
+  	  }
+  	  .subname{
+  	  	display:inline-block;
+  	  	margin:7px 0 0 6px;
+  	  	padding-top: 5px;
+  	  	font-size: 10pt;
+  	  	line-height: ;
+  	  	vertical-align: top;
+  	  	font-family:"Lucida Grande","ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	line-height: 90%;
+  	  	word-break: break-all;
+  	  	color: #C4C4C4;
+  	  }
+  	  .subname2{
+  	  	display:inline-block;
+  	  	margin:1px 0 0 6px;
+  	  	padding-top: 5px;
+  	  	font-size: 10pt;
+  	  	line-height: ;
+  	  	vertical-align: top;
+  	  	font-family:"Lucida Grande","ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	line-height: 90%;
+  	  	word-break: break-all;
+  	  	color: #C4C4C4;
+  	  }
+
+  	  .more_button{
+  	  	vertical-align: bottom;
+  	  	
+  	  	z-index: 2;
+  	  	/*background-image: url(more.png);*/
+  	  }
+
+  	  .foot{
+  	  	float:left;
+  	  	display:inline-block;
+  	  	margin-left: 24%;
+  	  	font-family:"Lucida Grande","ff-nuvo-web-pro-1","ff-nuvo-web-pro-2", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+  	  	font-size: 9pt; 
+  	  	color: #6F6F6F;
+  	  	width: 70%;
+  	  }  
+
+  	  .about{
+  	  	
+  	  }
+
+  	  .share{
+  	  	position: 10%;  	  	
+  	  	float:right;
+  	  	width:6%;
+  	  }
+
+  	  .comment {
+  	  	color: #eee;
+  	  	text-align: left;
+  	  }
+  	  #disqus_thread {
+  	  	display: none;
+  	  }
+
+  	  .copyright{
+
+  	  	float:left;
+  	  }
+  	</style>
+
+    <title>AnywhereAnything</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon-precomposed" href="http://lackar.com/aa/ios.png">
+    
+<script async="" type="text/javascript" src="./AnywhereAnything_files/v2"></script><script async="" type="text/javascript" src="./AnywhereAnything_files/tc.js.下载"></script><script src="./AnywhereAnything_files/saved_resource" async="" type="text/javascript"></script><script async="" type="text/javascript" src="./AnywhereAnything_files/saved_resource(1)"></script><script async="" src="./AnywhereAnything_files/analytics.js.下载"></script><script type="text/javascript" async="" src="./AnywhereAnything_files/embed.js.下载"></script><script async="" src="./AnywhereAnything_files/colored.js.下载"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.83b5b8f9aa16033ab1cb9cb54bf59140.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.f676c84aeac20fb55187512d1a7172ca.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.a3f978b6f348e2046c28125fab88fc13.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><script src="./AnywhereAnything_files/alfalfa.4a5fcca1fe50a757044dfd331b660625.js.下载" async="" charset="UTF-8"></script></head>
+
+<body>
+	<div id="fb-root"></div>
+
+	<div class="content">
+
+	<div class="kw">
+	<img src="./AnywhereAnything_files/searchicon.png" class="searchicon">
+		<input id="kw" autocomplete="off"><br>
+		
+		<img src="./AnywhereAnything_files/logo.png"><br>
+	<div class="info">
+		<p>输入关键词，然后点网站，即在那个网站里搜索。按回车搜索 Google<br>
+			by <a href="http://lackar.com/" target="_blank">Lackar</a> 和 Seevii</p>
+			</div>
+		</div>
+
+		<div class="popular">
+		<p class="catalogname"></p>
+			<div class="top">
+      <img id="bing" class="pop" src="./AnywhereAnything_files/bing.png" onclick="search(this)">
+      </div>
+      <div class="top">
+      <img id="google" src="./AnywhereAnything_files/google.png" class="pop" onclick="search(this)">
+      </div>
+			<div class="top">
+			<img id="douban" class="pop" src="./AnywhereAnything_files/douban.png" onclick="search(this)">	
+			</div>
+			<div class="top">
+			<img id="sinaweibo" class="pop" src="./AnywhereAnything_files/sinaweibo.png" onclick="search(this)">	
+			</div>
+			<div class="top">
+			<img id="googleimage" class="pop" src="./AnywhereAnything_files/googleimage.png" onclick="search(this)">
+			</div>
+			<div class="top">
+			<img id="pinterest" src="./AnywhereAnything_files/pinterest.png" class="pop" onclick="search(this)">
+			</div>
+			<div class="top">
+			<img id="twitter" src="./AnywhereAnything_files/twitter.png" class="pop" onclick="search(this)">
+			</div>
+      <div class="top">
+      <img id="googleditu" class="pop" src="./AnywhereAnything_files/googlemaps.png" onclick="search(this)">
+      </div>
+			<div class="top">
+			<img id="youdict" class="pop" src="./AnywhereAnything_files/youdict.png" onclick="search(this)">
+			</div>
+			
+			
+		</div>
+
+		<div class="entrances">
+<div class="catalog">
+		<p class="catalogname">知识</p>
+		<div class="top">
+		<img id="wikipediazh" class="topicon" src="./AnywhereAnything_files/wikipedia.png" onclick="search(this)"><p class="topname">维基百科</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="zhihu" src="./AnywhereAnything_files/zhihu.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/zhihu.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">知乎</p>
+		</div>
+		<div class="sub" style="cursor: pointer;">
+		<img id="quora" src="./AnywhereAnything_files/quora.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/quora.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Quora</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="baiduzhidao" src="./AnywhereAnything_files/baiduzhidao.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/baiduzhidao.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">百度知道</p>
+		</div>
+		<div class="sub" style="cursor: pointer;">
+    <img id="googlescholar" src="./AnywhereAnything_files/googlescholar.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/googlescholar.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Google学术</p>
+    </div>
+		<div class="sub" style="cursor: pointer;">
+    <img id="khan" src="./AnywhereAnything_files/khan.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/khan.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Khan Academy</p>
+    </div>
+		<div class="sub" style="cursor: pointer;">
+    <img id="wikihow" src="./AnywhereAnything_files/wikihow.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wikihow.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">wikiHow</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+		
+    
+    
+		
+    
+    
+		
+		
+		
+		
+<!--<div class='sub'>
+		<img  id='coursera' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/coursera.png"  class="subicon" onclick='search(this)' /><p class='subname'>Coursera</p>
+		</div>-->
+		
+		<!--<div class='sub'>
+		<img  id='knowyourmeme' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/knowyourmeme.png"  class="subicon" onclick='search(this)' /><p class='subname2'>Know Your</br>Meme</p>
+		</div>-->
+    
+		
+		
+		
+		<!--<div class='sub'>
+		<img  id='wikidata' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wikidata.png"  class="subicon" onclick='search(this)' /><p class='subname'>Wikidata</p>
+		</div>-->
+		
+
+		
+
+<!--<div class='sub'>
+		<img  id='ehow' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ehow.png"  class="subicon" onclick='search(this)' /><p class='subname'>eHow</p>
+		</div>-->
+		
+
+    
+		<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+		<img id="wikipediaen" src="./AnywhereAnything_files/wikipedia.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wikipedia.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Wikipedia</p>
+		</div><div class="sub" style="cursor: pointer;">
+    <img id="worldcat" src="./AnywhereAnything_files/worldcat.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/worldcat.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">WorldCat</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="ted" src="./AnywhereAnything_files/ted.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ted.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">TED</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="xiachufang" src="./AnywhereAnything_files/xiachufang.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/xiachufang.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">下厨房</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="wenku" src="./AnywhereAnything_files/wenku.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wenku.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">百度文库</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="mbalib" src="./AnywhereAnything_files/mbalib.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/mbalib.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">MBA智库</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="slideshare" src="./AnywhereAnything_files/slideshare.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/slideshare.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Slideshare</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="guokr" src="./AnywhereAnything_files/guokr.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/guokr.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">果壳</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="wikia" src="./AnywhereAnything_files/wikia.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wikia.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Wikia</p>
+		</div><div class="sub" style="cursor: pointer;">
+    <img id="delicious" src="./AnywhereAnything_files/delicious.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/delicious.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Delicious</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="instructables" src="./AnywhereAnything_files/instructables.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/instructables.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Instructables</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="dxy" src="./AnywhereAnything_files/dxy.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/dxy.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">丁香园</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="datatang" src="./AnywhereAnything_files/datatang.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/datatang.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">数据堂</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="icpsr" src="./AnywhereAnything_files/icpsr.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/icpsr.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">ICPSR</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="lynda" src="./AnywhereAnything_files/lynda.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/lynda.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Lynda</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="howcast" src="./AnywhereAnything_files/howcast.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/howcast.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Howcast</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="internetarchive" src="./AnywhereAnything_files/internetarchive.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/internetarchive.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname2">Internet<br>Archive</p>
+		</div></div></div>
+
+		
+
+<div class="catalog" style="transition: all 0.2s ease 0.04s;">
+		<p class="catalogname">设计艺术</p>
+		<div class="top">
+		<img id="behance" class="topicon" src="./AnywhereAnything_files/behance.png" onclick="search(this)"><p class="topname">Behance</p>
+		</div>
+		<div class="sub" style="cursor: pointer; transition: all 0s ease;">
+    <img id="cargo" src="./AnywhereAnything_files/cargo.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/cargo.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname" style="transition: all 0s ease;">Cargo</p>
+    </div>
+		<div class="sub" style="cursor: pointer;">
+		<img id="designboom" src="./AnywhereAnything_files/designboom.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/designboom.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">designboom</p>
+		</div>
+		<div class="sub" style="cursor: pointer;">
+		<img id="nounproject" src="./AnywhereAnything_files/nounproject.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/nounproject.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">TheNounProject</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="dribbble" src="./AnywhereAnything_files/dribbble.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/dribbble.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Dribbble</p>
+		</div>
+		<div class="sub" style="cursor: pointer;">
+		<img id="designernews" src="./AnywhereAnything_files/designernews.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/designernews.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Designer News</p>
+		</div>
+		<div class="sub" style="cursor: pointer;">
+		<img id="pinterest" src="./AnywhereAnything_files/pinterest.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/pinterest.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Pinterest</p>
+		<img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+		
+		
+    
+		
+		
+		
+		
+		
+		<!--<div class='sub'>
+		<img  id='tut' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tut.png"  class="subicon" onclick='search(this)' /><p class='subname'>Tuts+</p>
+		</div>
+    <div class='sub'>
+    <img  id='themeforest' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tthemeforestut.png"  class="subicon" onclick='search(this)' /><p class='subname'>ThemeForest</p>
+    </div>
+    <div class='sub'>
+    <img  id='graphicburger' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/graphicburger.png"  class="subicon" onclick='search(this)' /><p class='subname'>GraphicBurger</p>
+    </div>-->
+
+
+    <!--<div class='sub'>
+    <img  id='archilovers' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/archilovers.png" class="subicon" onclick='search(this)' /><p class='subname'>Archilovers</p>
+    </div>
+    <div class='sub'>
+    <img  id='architizer' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/architizer.png" class="subicon" onclick='search(this)' /><p class='subname'>Architizer</p>
+    </div>-->
+    
+<!--<div class='sub'>
+		<img  id='visualy' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/visualy.png"  class="subicon" onclick='search(this)' /><p class='subname'>Visual.ly</p>
+		</div>
+		<div class='sub'>
+		<img  id='smashingmagazine' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/smashingmagazine.png"  class="subicon" onclick='search(this)' /><p class='subname2'>Smashing</br>Magazine</p>
+		</div>
+    <div class='sub'>
+    <img  id='patterntap' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/patterntap.png"  class="subicon" onclick='search(this)' /><p class='subname'>PatternTap</p>
+    </div>
+		<div class='sub'>
+		<img  id='iconfinder' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/iconfinder.png"  class="subicon" onclick='search(this)' /><p class='subname'>IconFinder</p>
+		</div>
+<div class='sub'>
+		<img  id='logopond' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/logopond.png"  class="subicon" onclick='search(this)' /><p class='subname'>Logopond</p>
+		</div>
+    <div class='sub'>
+    <img  id='seeklogo' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/seeklogo.png"  class="subicon" onclick='search(this)' /><p class='subname'>SeekLogo</p>
+    </div>-->
+		
+		
+    <!--
+    <div class='sub'>
+    <img  id='brandtale' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/brandtale.png"  class="subicon" onclick='search(this)' /><p class='subname'>Brandtale</p>
+    </div>
+<div class='sub'>
+    <img  id='chromeexp' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/chromeexp.png"  class="subicon" onclick='search(this)' /><p class='subname'>Chrome</br>Experiments</p>
+    </div>-->
+		
+		
+<!--<div class='sub'>
+		<img  id='moma' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/moma.png"  class="subicon" onclick='search(this)' /><p class='subname'>MoMA</p>
+		</div>-->
+		
+
+
+		<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+		<img id="iconmonstr" src="./AnywhereAnything_files/iconmonstr.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/iconmonstr.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Iconmonstr</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="tumblr" src="./AnywhereAnything_files/tumblr.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tumblr.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Tumblr</p>
+		</div><div class="sub" style="cursor: pointer;">
+    <img id="niice" src="./AnywhereAnything_files/niice.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/niice.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Niice</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="artsy" src="./AnywhereAnything_files/artsy.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/artsy.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Artsy</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="artstack" src="./AnywhereAnything_files/artstack.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/artstack.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">ArtStack</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="fastcodesign" src="./AnywhereAnything_files/fastcodesign.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/fastcodesign.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Co.DESIGN</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="deviantart" src="./AnywhereAnything_files/deviantart.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/deviantart.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">deviantArt</p>
+		</div><div class="sub" style="cursor: pointer;">
+    <img id="houzz" src="./AnywhereAnything_files/houzz.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/houzz.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Houzz</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="archdaily" src="./AnywhereAnything_files/archdaily.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/archdaily.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Arch Daily</p>
+		</div><div class="sub" style="cursor: pointer;">
+    <img id="sketchfab" src="./AnywhereAnything_files/sketchfab.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/sketchfab.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Sketchfab</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="myfonts" src="./AnywhereAnything_files/myfonts.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/myfonts.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">MyFonts</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="typekit" src="./AnywhereAnything_files/typekit.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/typekit.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Typekit</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="googleart" src="./AnywhereAnything_files/googleart.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/googleart.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname2">Google<br>Cultural Institute</p>
+		</div></div></div>
+
+    <div class="catalog">
+    <p class="catalogname">社交网络</p>
+    <div class="top">
+    <img id="sinaweibo" class="topicon" src="./AnywhereAnything_files/sinaweibo.png" onclick="search(this)"><p class="topname">新浪微博</p>
+    </div>
+<div class="sub" style="cursor: pointer;">
+    <img id="douban" src="./AnywhereAnything_files/douban.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/douban.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">豆瓣</p>
+    </div>
+
+<div class="sub" style="cursor: pointer;">
+    <img id="twitter" src="./AnywhereAnything_files/twitter.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/twitter.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Twitter</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="facebook" src="./AnywhereAnything_files/facebook.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/facebook.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Facebook</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="wxgongzhonghao" src="./AnywhereAnything_files/wxgongzhonghao.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wxgongzhonghao.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">微信公众号</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="wxwenzhang" src="./AnywhereAnything_files/wxwenzhang.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wxwenzhang.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">微信公众号文章</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="google-douban" src="./AnywhereAnything_files/google-douban.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/google-douban.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">豆瓣(Google)</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    <div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="linkedin" src="./AnywhereAnything_files/linkedin.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/linkedin.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">LinkedIn</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="tieba" src="./AnywhereAnything_files/tieba.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tieba.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">百度贴吧</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="medium" src="./AnywhereAnything_files/medium.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/medium.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Medium</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="jianshu" src="./AnywhereAnything_files/jianshu.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/jianshu.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">简书</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="reddit" src="./AnywhereAnything_files/reddit.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/reddit.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Reddit</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="tumblrblog" src="./AnywhereAnything_files/tumblrblog.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tumblrblog.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Tumblr</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="pixnet" src="./AnywhereAnything_files/pixnet.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/pixnet.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">痞客邦</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="googleplus" src="./AnywhereAnything_files/googleplus.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/googleplus.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Google+</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="tagboard" src="./AnywhereAnything_files/tagboard.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tagboard.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Tagboard</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="tianya" src="./AnywhereAnything_files/tianya.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tianya.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">天涯社区</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="mop" src="./AnywhereAnything_files/mop.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/mop.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">mop</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="kdnet" src="./AnywhereAnything_files/kdnet.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/kdnet.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">凯迪</p>
+    </div></div></div>
+
+    <div class="catalog">
+    <p class="catalogname">购物</p>
+    <div class="top">
+    <img id="taobao" class="topicon" src="./AnywhereAnything_files/taobao.png" onclick="search(this)"><p class="topname">淘宝</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="smzdm" src="./AnywhereAnything_files/smzdm.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/smzdm.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">什么值得买</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="tmall" src="./AnywhereAnything_files/tmall.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tmall.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">天猫</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="360buy" src="./AnywhereAnything_files/jingdong.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/jingdong.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">京东</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="amazoncn" src="./AnywhereAnything_files/amazoncn.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/amazoncn.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">亚马逊</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="yhd" src="./AnywhereAnything_files/yhd.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/yhd.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">一号店</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="amazon" src="./AnywhereAnything_files/amazon.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/amazon.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Amazon</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+    
+    <!--<div class='sub'>
+    <img  id='meilishuo' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/meilishuo.png"  class="subicon" onclick='search(this)' /><p class='subname'>美丽说</p>
+    </div>-->
+    
+    
+    
+
+    
+    
+    
+    
+    
+<!--<div class='sub'>
+    <img  id='society6' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/society6.png"  class="subicon" onclick='search(this)' /><p class='subname'>Society6</p>
+    </div>-->
+    <div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="mogujie" src="./AnywhereAnything_files/mogujie.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/mogujie.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">蘑菇街</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="suning" src="./AnywhereAnything_files/suning.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/suning.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">苏宁易购</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="ebay" src="./AnywhereAnything_files/ebay.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ebay.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">eBay</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="etsy" src="./AnywhereAnything_files/etsy.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/etsy.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Etsy</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="verygoods" src="./AnywhereAnything_files/verygoods.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/verygoods.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">VeryGoods</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="thngs" src="./AnywhereAnything_files/thngs.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/thngs.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Thngs</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="1688" src="./AnywhereAnything_files/1688.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/1688.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">阿里巴巴</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="fancy" src="./AnywhereAnything_files/fancy.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/fancy.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Fancy</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="chiphell" src="./AnywhereAnything_files/chiphell.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/chiphell.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Chiphell</p>
+    </div></div></div>
+
+
+
+
+		<div class="catalog">
+    <p class="catalogname">图片</p>
+    <div class="top">
+    <img id="googleimage" src="./AnywhereAnything_files/googleimage.png" class="topicon" onclick="search(this)"><p class="topname">Google图片</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="flickr" src="./AnywhereAnything_files/flickr.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/flickr.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Flickr</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="pinterest" src="./AnywhereAnything_files/pinterest.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/pinterest.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Pinterest</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="doubanalbum" src="./AnywhereAnything_files/doubanalbum.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/doubanalbum.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">豆瓣相册</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="instagram" src="./AnywhereAnything_files/webstagram.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/webstagram.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Instagram</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="500px" src="./AnywhereAnything_files/500px.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/500px.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">500px</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="googlephotos" src="./AnywhereAnything_files/googlephotos.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/googlephotos.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">GooglePhotos</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+    
+    <!--<div class='sub'>
+    <img  id='brandsoftheworld' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/brandsoftheworld.png" class="subicon" onclick='search(this)' /><p class='subname2'>Brands of<br>the World</p>
+    </div>-->
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+    
+    <div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="wikicommons" src="./AnywhereAnything_files/wikicommons.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wikicommons.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Wiki Commons</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="weibopic" src="./AnywhereAnything_files/weibopic.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/weibopic.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">新浪微博图片</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="imgur" src="./AnywhereAnything_files/imgur.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/imgur.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Imgur</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="giphy" src="./AnywhereAnything_files/giphy.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/giphy.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Giphy</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="nasaimages" src="./AnywhereAnything_files/nasaimages.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/nasaimages.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">NasaImages</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="corbis" src="./AnywhereAnything_files/corbis.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/corbis.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Corbis</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="istockphoto" src="./AnywhereAnything_files/istockphoto.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/istockphoto.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">iStockphoto</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="gettycn" src="./AnywhereAnything_files/getty.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/getty.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname2">华盖创意<br>Getty China</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="gettyimages" src="./AnywhereAnything_files/getty.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/getty.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Getty</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="lofter" src="./AnywhereAnything_files/lofter.png" data-original="http://77g2kh.com1.z0.glb.clouddn.com/lofter.png" class="subicon" onclick="search(this)" style="display: inline-block;"><p class="subname">Lofter</p>
+    
+    </div></div></div>
+
+<div class="catalog">
+		<p class="catalogname">编程</p>
+		<div class="top">
+		<img id="stackoverflow" class="topicon" src="./AnywhereAnything_files/stackoverflow.png" onclick="search(this)"><p class="topname">Stack Overflow</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="github" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/github.png" class="subicon" onclick="search(this)"><p class="subname">Github</p>
+		</div>
+		<div class="sub" style="cursor: pointer;">
+		<img id="appledev" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/appledev.png" class="subicon" onclick="search(this)"><p class="subname">Apple Devloper</p>
+		</div>
+		<div class="sub" style="cursor: pointer;">
+		<img id="cocoapods" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/cocoapods.png" class="subicon" onclick="search(this)"><p class="subname">CocoaPods</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="unity" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/unity.png" class="subicon" onclick="search(this)"><p class="subname">Unity</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="apisio" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/apisio.png" class="subicon" onclick="search(this)"><p class="subname">APIs.io</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="codepen" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/codepen.png" class="subicon" onclick="search(this)"><p class="subname">CodePen.IO</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+		
+    
+		
+
+		
+		
+    
+
+		
+		<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+		<img id="cocoacontrols" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/cocoacontrols.png" class="subicon" onclick="search(this)"><p class="subname">Cocoa Controls</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="cocoachina" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/cocoachina.png" class="subicon" onclick="search(this)"><p class="subname">CocoaChina</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="code4app" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/code4app.png" class="subicon" onclick="search(this)"><p class="subname">Code4App</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="processing" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/processing.png" class="subicon" onclick="search(this)"><p class="subname">Processing</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="v2ex" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/v2ex.png" class="subicon" onclick="search(this)"><p class="subname">V2EX</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="alexa" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/alexa.png" class="subicon" onclick="search(this)"><p class="subname">Alexa</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="godaddy" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/godaddy.png" class="subicon" onclick="search(this)"><p class="subname">GoDaddy</p>
+		</div><div class="sub" style="cursor: pointer;">
+    <img id="namedotcom" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/namedotcom.png" class="subicon" onclick="search(this)"><p class="subname"><a class="vglnk" href="http://name.com/" rel="nofollow"><span>Name</span><span>.</span><span>com</span></a></p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="csdn" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/csdn.png" class="subicon" onclick="search(this)"><p class="subname">CSDN</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="w3school" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/w3school.png" class="subicon" onclick="search(this)"><p class="subname">w3school</p>
+		</div></div></div>
+
+
+
+
+
+
+	
+<div class="catalog">
+    <p class="catalogname">APP</p>
+    <div class="top">
+    <img id="fndio" class="topicon" src="./AnywhereAnything_files/appstore.png" onclick="search(this)"><p class="topname">App Store</p>
+    </div>
+    
+    <div class="sub" style="cursor: pointer;">
+    <img id="producthunt" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/producthunt.png" class="subicon" onclick="search(this)"><p class="subname">Product Hunt</p>
+    </div>
+<div class="sub" style="cursor: pointer;">
+    <img id="wandoujia" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wandoujia.png" class="subicon" onclick="search(this)"><p class="subname">豌豆荚</p>
+    </div>
+    
+    <div class="sub" style="cursor: pointer;">
+    <img id="googleplay" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/googleplay.png" class="subicon" onclick="search(this)"><p class="subname">Google Play</p>
+    </div>
+    
+    <div class="sub" style="cursor: pointer;">
+    <img id="yingyongbao" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/yingyongbao.png" class="subicon" onclick="search(this)"><p class="subname">应用宝</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="coolapk" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/coolapk.png" class="subicon" onclick="search(this)"><p class="subname">酷安网</p>
+    </div>
+    <!--<div class='sub'>
+    <img  id='beautifulpixels' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/beautifulpixels.png"  class="subicon" onclick='search(this)' /><p class='subname'>Beautiful Pixels</p>
+    </div>-->
+    <div class="sub" style="cursor: pointer;">
+    <img id="alternativeto" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/alternativeto.png" class="subicon" onclick="search(this)"><p class="subname">AlternativeTo</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+    
+    
+    
+<!--<div class='sub'>
+    <img  id='163app' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/163app.png" class="subicon" onclick='search(this)' /><p class='subname'>网易应用中心</p>
+    </div>-->
+
+
+    <!--<div class='sub'>
+    <img  id='overlapps' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/overlapps.png"  class="subicon" onclick='search(this)' /><p class='subname'>Overlapps</p>
+    </div>-->
+    
+    <!--<div class='sub'>
+    <img  id='appdesignserved' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/appdesignserved.png"  class="subicon" onclick='search(this)' /><p class='subname2'>App Design</br>Served</p>
+    </div>-->
+    
+    
+    <!--<div class='sub'>
+    <img  id='Quixey' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/Quixey.png"  class="subicon" onclick='search(this)' /><p class='subname'>Quixey</p>
+    </div>
+    <div class='sub'>
+    <img  id='xyo' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/xyo.png"  class="subicon" onclick='search(this)' /><p class='subname'>XYO</p>
+    </div>
+    <div class='sub'>
+    <img  id='appstorm' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/appstorm.png"  class="subicon" onclick='search(this)' /><p class='subname'>Appstorm</p>
+    </div>-->
+    <div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="appannie" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/appannie.png" class="subicon" onclick="search(this)"><p class="subname">App Annie</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="doubanapp" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/doubanapp.png" class="subicon" onclick="search(this)"><p class="subname">豆瓣移动应用</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="betalist" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/betalist.png" class="subicon" onclick="search(this)"><p class="subname">Beta List</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="creativeapplications" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/creativeapplications.png" class="subicon" onclick="search(this)"><p class="subname2">Creative<br>Applications</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="chromeexts" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/chromeexts.png" class="subicon" onclick="search(this)"><p class="subname2">Chrome<br>网上应用店</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="windowsphonecn" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/windowsphonecn.png" class="subicon" onclick="search(this)"><p class="subname2">Windows Phone<br>应用+游戏</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="knicket" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/knicket.png" class="subicon" onclick="search(this)"><p class="subname">KNICKET</p>
+    </div></div></div>
+	
+
+		
+
+    
+	
+
+<div class="catalog">
+		<p class="catalogname">音乐</p>	
+		<div class="top">
+		<img id="xiami" class="topicon" src="./AnywhereAnything_files/xiami.png" onclick="search(this)"><p class="topname">虾米</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="163music" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/163music.png" class="subicon" onclick="search(this)"><p class="subname">网易云音乐</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="spotify" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/spotify.png" class="subicon" onclick="search(this)"><p class="subname">Spotify</p>
+    </div>
+<div class="sub" style="cursor: pointer;">
+		<img id="soundcloud" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/soundcloud.png" class="subicon" onclick="search(this)"><p class="subname">Soundcloud</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="doubanmusic" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/doubanmusic.png" class="subicon" onclick="search(this)"><p class="subname">豆瓣音乐</p>
+		</div>
+    
+    <div class="sub" style="cursor: pointer;">
+    <img id="bandcamp" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/bandcamp.png" class="subicon" onclick="search(this)"><p class="subname">bandcamp</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="grooveshark" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/grooveshark.png" class="subicon" onclick="search(this)"><p class="subname">Grooveshark</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+
+		
+
+		
+    
+		<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+		<img id="pandora" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/pandora.png" class="subicon" onclick="search(this)"><p class="subname">Pandora</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="lastfm" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/lastfm.png" class="subicon" onclick="search(this)"><p class="subname">Last.fm</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="appstore" class="subicon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/itunes.png" onclick="search(this)"><p class="subname">iTunes</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="appstore" class="subicon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/podcasts.png" onclick="search(this)"><p class="subname">Podcasts</p>
+		</div><div class="sub" style="cursor: pointer;">
+    <img id="youtube" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/youtube.png" class="subicon" onclick="search(this)"><p class="subname">YouTube</p>
+    </div></div></div>
+
+<div class="catalog">
+		<p class="catalogname">视频</p>
+			<div class="top">
+		<img id="youtube" class="topicon" src="./AnywhereAnything_files/youtube.png" onclick="search(this)"><p class="topname">YouTube</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="vimeo" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/vimeo.png" class="subicon" onclick="search(this)"><p class="subname">Vimeo</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="youku" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/youku.png" class="subicon" onclick="search(this)"><p class="subname">优酷</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="bilibili" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/bilibili.png" class="subicon" onclick="search(this)"><p class="subname">Bilibili(゜-゜)つ</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="qqv" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/qqv.png" class="subicon" onclick="search(this)"><p class="subname">腾讯视频</p>
+    </div>
+		
+    <div class="sub" style="cursor: pointer;">
+    <img id="iqiyi" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/iqiyi.png" class="subicon" onclick="search(this)"><p class="subname">爱奇艺</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="letv" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/letv.png" class="subicon" onclick="search(this)"><p class="subname">乐视视频</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+    
+		
+
+		
+		<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="sohutv" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/sohutv.png" class="subicon" onclick="search(this)"><p class="subname">搜狐视频</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="acfun" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/acfun.png" class="subicon" onclick="search(this)"><p class="subname">AcFun.tv</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="ted" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ted.png" class="subicon" onclick="search(this)"><p class="subname">TED</p>
+		</div></div></div>
+
+    <div class="catalog">
+    <p class="catalogname">游戏</p>
+    <div class="top">
+    <img id="steam" class="topicon" src="./AnywhereAnything_files/steam.png" onclick="search(this)"><p class="topname">Steam</p>
+    </div>
+    
+    <div class="sub" style="cursor: pointer;">
+    <img id="ign" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ign.png" class="subicon" onclick="search(this)"><p class="subname">IGN</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="twitch" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/twitch.png" class="subicon" onclick="search(this)"><p class="subname">Twitch</p>
+    </div>
+<div class="sub" style="cursor: pointer;">
+    <img id="gamespot" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/gamespot.png" class="subicon" onclick="search(this)"><p class="subname">Gamespot</p>
+    </div>
+
+<div class="sub" style="cursor: pointer;">
+    <img id="polygon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/polygon.png" class="subicon" onclick="search(this)"><p class="subname">Polygon</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="vgchartz" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/vgchartz.png" class="subicon" onclick="search(this)"><p class="subname">VGChartz</p>
+    </div>
+<div class="sub" style="cursor: pointer;">
+    <img id="ali213" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ali213.png" class="subicon" onclick="search(this)"><p class="subname">游侠网</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+    
+    
+    
+    
+    
+    <div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="itchio" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/itchio.png" class="subicon" onclick="search(this)"><p class="subname">itch.io</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="minecraftwiki" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/minecraftwiki.png" class="subicon" onclick="search(this)"><p class="subname">Minecraft Wiki</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="indiedb" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/indiedb.png" class="subicon" onclick="search(this)"><p class="subname">IndieDB</p>
+    </div></div></div>
+
+<div class="catalog">
+		<p class="catalogname">电影</p>
+		
+		<div class="top">
+		<img id="doubanmovie" class="topicon" src="./AnywhereAnything_files/doubanmovie.png" onclick="search(this)"><p class="topname">豆瓣电影</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="imdb" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/imdb.png" class="subicon" onclick="search(this)"><p class="subname">IMDb</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="mtime" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/mtime.png" class="subicon" onclick="search(this)"><p class="subname">时光网</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="rottentomatoes" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/rottentomatoes.png" class="subicon" onclick="search(this)"><p class="subname">烂番茄</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="baiduyun" class="subicon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/baiduyun.png" onclick="search(this)"><p class="subname">百度云</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="thepiratebay" class="subicon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/thepiratebay.png" onclick="search(this)"><p class="subname">ThePirateBay</p>
+    </div>
+		<div class="sub" style="cursor: pointer;">
+		<img id="dianyingfm" class="subicon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/dianyingfm.png" onclick="search(this)"><p class="subname">电影FM</p>
+		<img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+		
+		
+		<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+		<img id="shooter" class="subicon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/shooter.png" onclick="search(this)"><p class="subname">射手网</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="torrentsto" class="subicon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/torrentsto.png" onclick="search(this)"><p class="subname">Torrents.to</p>
+		</div></div></div>
+		
+<div class="catalog">
+    <p class="catalogname">书籍</p>
+    <div class="top">
+    <img id="doubanbook" src="./AnywhereAnything_files/doubanbook.png" class="topicon" onclick="search(this)"><p class="topname">豆瓣读书</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="kindle" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/kindle.png" class="subicon" onclick="search(this)"><p class="subname">Kindle电子书</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="weipan" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/weipan.png" class="subicon" onclick="search(this)"><p class="subname">微盘</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="goodreads" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/goodreads.png" class="subicon" onclick="search(this)"><p class="subname">Goodreads</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="issuu" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/issuu.png" class="subicon" onclick="search(this)"><p class="subname">Issuu</p>
+    </div>
+    
+    <div class="sub" style="cursor: pointer;">
+    <img id="shuge" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/shuge.png" class="subicon" onclick="search(this)"><p class="subname">书格</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="phaidon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/phaidon.png" class="subicon" onclick="search(this)"><p class="subname">Phaidon</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+    
+    
+    
+  
+    
+    <div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+      <img id="duokan" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/duokan.png" class="subicon" onclick="search(this)"><p class="subname">多看阅读</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="ikandou" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ikandou.png" class="subicon" onclick="search(this)"><p class="subname">爱看豆</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="wikibooks" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wikibooks.png" class="subicon" onclick="search(this)"><p class="subname">Wikibooks</p>
+    </div><div class="sub" style="cursor: pointer;">
+      <img id="qidian" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/qidian.png" class="subicon" onclick="search(this)"><p class="subname">起点中文小说网</p>
+    </div></div></div>
+
+		<div class="catalog">
+		<p class="catalogname">新闻</p>
+		<div class="top">
+		<img id="theinitium" class="topicon" src="./AnywhereAnything_files/theinitium.png" onclick="search(this)">
+		<p class="topname">端</p>
+</div>
+		
+		<div class="sub" style="cursor: pointer;">
+		<img id="jandan" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/jandan.png" class="subicon" onclick="search(this)"><p class="subname">煎蛋</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="163news" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/163news.png" class="subicon" onclick="search(this)"><p class="subname">网易新闻</p>
+    </div>
+		
+		<div class="sub" style="cursor: pointer;">
+    <img id="bbcnews" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/bbcnews.png" class="subicon" onclick="search(this)"><p class="subname">BBC News</p>
+    </div>
+    
+		<div class="sub" style="cursor: pointer;">
+		<img id="qqnews" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/qqnews.png" class="subicon" onclick="search(this)"><p class="subname">腾讯新闻</p>
+		</div>
+    
+<div class="sub" style="cursor: pointer;">
+		<img id="googlenewscn" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/googlenewscn.png" class="subicon" onclick="search(this)"><p class="subname">Google新闻</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="feedly" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/feedly.png" class="subicon" onclick="search(this)"><p class="subname">Feedly</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+    
+    
+    <!--<div class='sub'>
+    <img  id='wired' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wired.png"  class="subicon" onclick='search(this)' /><p class='subname'>WIRED</p>
+    </div>-->
+    
+		
+
+		
+
+
+
+
+
+    
+		<!--<div class='sub'>
+    <img  id='googletrends' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/googletrends.png"  class="subicon" onclick='search(this)' /><p class='subname'>Google Trends</p>
+    </div>-->
+		
+		
+
+		<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="ifeng" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ifeng.png" class="subicon" onclick="search(this)"><p class="subname">凤凰网</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="sinaweibo" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/sinaweibo.png" class="subicon" onclick="search(this)"><p class="subname">新浪微博</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="twitter" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/twitter.png" class="subicon" onclick="search(this)"><p class="subname">Twitter</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="cnn" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/cnn.png" class="subicon" onclick="search(this)"><p class="subname">CNN</p>
+		</div><div class="sub" style="cursor: pointer;">
+    <img id="reuters" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/reuters.png" class="subicon" onclick="search(this)"><p class="subname">Reuters 路透社</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="ap" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ap.png" class="subicon" onclick="search(this)"><p class="subname">AP 美联社</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="guardian" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/guardian.png" class="subicon" onclick="search(this)"><p class="subname">Guardian 卫报</p>
+		</div><div class="sub" style="cursor: pointer;">
+    <img id="qdaily" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/qdaily.png" class="subicon" onclick="search(this)"><p class="subname">好奇心日报</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="wikinews" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wikinews.png" class="subicon" onclick="search(this)"><p class="subname">Wikinews</p>
+		</div></div></div>
+		
+<div class="catalog">
+		<p class="catalogname">旅行</p>
+		<div class="top">
+		<img id="googleditu" src="./AnywhereAnything_files/googlemaps.png" class="topicon" onclick="search(this)"><p class="topname">Google地图</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="googleearth" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/googleearth.png" class="subicon" onclick="search(this)"><p class="subname">Google Earth</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="dianping" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/dianping.png" class="subicon" onclick="search(this)"><p class="subname">大众点评网</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="gaode" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/gaode.png" class="subicon" onclick="search(this)"><p class="subname">高德地图</p>
+    </div>
+<div class="sub" style="cursor: pointer;">
+    <img id="mafengwo" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/mafengwo.png" class="subicon" onclick="search(this)"><p class="subname">马蜂窝</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="googlemaps" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/googlemaps.png" class="subicon" onclick="search(this)"><p class="subname">Google Maps</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="airbnb" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/airbnb.png" class="subicon" onclick="search(this)"><p class="subname">Airbnb</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+
+
+    
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="baidumap" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/baidumap.png" class="subicon" onclick="search(this)"><p class="subname">百度地图</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="qyer" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/qyer.png" class="subicon" onclick="search(this)"><p class="subname">穷游</p>
+		</div><div class="sub" style="cursor: pointer;">
+    <img id="panoramio" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/panoramio.png" class="subicon" onclick="search(this)"><p class="subname">Panoramio</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="foursquare" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/foursquare.png" class="subicon" onclick="search(this)"><p class="subname">Foursquare</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="lonelyplanet" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/lonelyplanet.png" class="subicon" onclick="search(this)"><p class="subname">Lonely Planet</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="ukgov" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ukgov.png" class="subicon" onclick="search(this)"><p class="subname">GOV.UK</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="breadtrip" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/breadtrip.png" class="subicon" onclick="search(this)"><p class="subname">面包旅行</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="chanyouji" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/chanyouji.png" class="subicon" onclick="search(this)"><p class="subname">蝉游记</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="tripadvisor" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/TripAdvisor.png" class="subicon" onclick="search(this)"><p class="subname">TripAdvisor</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="wikivoyage" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wikivoyage.png" class="subicon" onclick="search(this)"><p class="subname">Wikivoyage</p>
+		</div></div></div>
+	
+		
+		
+
+<div class="catalog">
+		<p class="catalogname">传统搜索</p>
+	<div class="top">
+		<img id="baidu" src="./AnywhereAnything_files/baidu.png" class="topicon" onclick="search(this)">
+		<p class="topname">百度<font color="red">*谨慎使用</font></p>
+	</div>
+  <div class="sub" style="cursor: pointer;">
+    <img id="sogou" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/sogou.png" class="subicon" onclick="search(this)">
+    <p class="subname">搜狗</p>
+  </div>
+  
+  <div class="sub" style="cursor: pointer;">
+    <img id="google" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/google.png" class="subicon" onclick="search(this)">
+    <p class="subname">Google</p>
+  </div>
+  
+	<div class="sub" style="cursor: pointer;">
+		<img id="bing" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/bing.png" class="subicon" onclick="search(this)">
+		<p class="subname">必应Bing</p>
+	</div>
+  <div class="sub" style="cursor: pointer;">
+    <img id="wolframalpha" class="subicon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wolframalpha.png" onclick="search(this)">
+    <p class="subname">Wolfram|Alpha</p>
+  </div>
+  <div class="sub" style="cursor: pointer;">
+    <img id="duckduckgo" class="subicon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/duckduckgo.png" onclick="search(this)">
+    <p class="subname">DuckDuckGo</p>
+  </div>
+	<div class="sub" style="cursor: pointer;">
+		<img id="yahoo" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/yahoo.png" class="subicon" onclick="search(this)">
+		<p class="subname">Yahoo!</p>
+	<img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+  <!--
+  <div class='sub'>
+    <img  id='aol' src="grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/aol.png"  class="subicon" onclick='search(this)' />
+    <p class='subname'>Aol</p>
+  </div>-->
+	
+	
+  
+	
+	
+<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="avira" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/avira.png" class="subicon" onclick="search(this)">
+    <p class="subname">AviraSearch</p>
+  </div><div class="sub" style="cursor: pointer;">
+    <img id="thinga" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/thinga.png" class="subicon" onclick="search(this)">
+    <p class="subname">Thinga</p>
+  </div><div class="sub" style="cursor: pointer;">
+		<img id="google2" class="subicon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/google.png" onclick="search(this)">
+		<p class="subname">Google 2</p>
+	</div><div class="sub" style="cursor: pointer;">
+		<img id="gmail" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/gmail.png" class="subicon" onclick="search(this)">
+		<p class="subname">Gmail</p>
+	</div></div></div>
+
+
+		<div class="catalog">
+		<p class="catalogname">科技数码</p>
+		<div class="top">
+		<img id="verge" class="topicon" src="./AnywhereAnything_files/verge.png" onclick="search(this)"><p class="topname">The Verge</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="ifanr" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/ifanr.png" class="subicon" onclick="search(this)"><p class="subname">爱范儿</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="36kr" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/36kr.png" class="subicon" onclick="search(this)"><p class="subname">36氪</p>
+    </div>
+		
+<div class="sub" style="cursor: pointer;">
+		<img id="tnw" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tnw.png" class="subicon" onclick="search(this)"><p class="subname">The Next Web</p>
+		</div>
+<div class="sub" style="cursor: pointer;">
+		<img id="engadget" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/engadget.png" class="subicon" onclick="search(this)"><p class="subname">Engadget</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="techcrunch" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/techcrunch.png" class="subicon" onclick="search(this)"><p class="subname">Tech Crunch</p>
+    </div>
+		<div class="sub" style="cursor: pointer;">
+		<img id="kickstarter" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/kickstarter.png" class="subicon" onclick="search(this)"><p class="subname">Kickstarter</p>
+		<img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+		
+    
+		
+		
+		
+		
+		
+
+		
+
+		<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="dgtle" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/dgtle.png" class="subicon" onclick="search(this)"><p class="subname">数字尾巴</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="pingwest" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/pingwest.png" class="subicon" onclick="search(this)"><p class="subname">PingWest品玩</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="fastcompany" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/fastcompany.png" class="subicon" onclick="search(this)"><p class="subname">Fast Company</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="gdgt" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/gdgt.png" class="subicon" onclick="search(this)"><p class="subname">gdgt</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="arstechnica" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/arstechnica.png" class="subicon" onclick="search(this)"><p class="subname">Ars Technica</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="allthingsd" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/allthingsd.png" class="subicon" onclick="search(this)"><p class="subname">AllThingsD</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="gigaom" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/gigaom.png" class="subicon" onclick="search(this)"><p class="subname">GigaOM</p>
+		</div><div class="sub" style="cursor: pointer;">
+		<img id="cnet" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/cnet.png" class="subicon" onclick="search(this)"><p class="subname">CNET</p>
+		</div></div></div>
+
+
+
+
+
+
+
+		<div class="catalog">
+		<p class="catalogname">其他</p>
+
+		<div class="top">
+		<img id="googletrans" src="./AnywhereAnything_files/googletrans.png" class="topicon" onclick="search(this)"><p class="topname">Google翻译</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="sf" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/sf.png" class="subicon" onclick="search(this)"><p class="subname">顺丰快递追踪</p>
+    </div>
+		
+    <div class="sub" style="cursor: pointer;">
+    <img id="iciba" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/iciba.png" class="subicon" onclick="search(this)"><p class="subname">金山词霸</p>
+    </div>
+		<div class="sub" style="cursor: pointer;">
+		<img id="xueqiu" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/xueqiu.png" class="subicon" onclick="search(this)"><p class="subname">雪球</p>
+		</div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="tianyancha" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tianyancha.png" class="subicon" onclick="search(this)"><p class="subname">天眼查</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="tradingeconomics" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/tradingeconomics.png" class="subicon" onclick="search(this)"><p class="subname">TradingEcnmc</p>
+    </div>
+    <div class="sub" style="cursor: pointer;">
+    <img id="urbandictionary" src="./AnywhereAnything_files/urbandictionary.png" class="subicon" onclick="search(this)"><p class="subname">UrbanDictionary</p>
+    <img class="cover_div" src="./AnywhereAnything_files/more.png" style="position:absolute; top:0;left:0;"></div>
+		
+    
+		
+    
+
+    
+    
+    
+    
+		
+		<div class="more_list hid" style="display: none;"><div class="sub" style="cursor: pointer;">
+    <img id="moegirl" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/moegirl.png" class="subicon" onclick="search(this)"><p class="subname">萌娘百科</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="9gag" src="./AnywhereAnything_files/9gag.png" class="subicon" onclick="search(this)"><p class="subname">9GAG</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="ifttt" src="./AnywhereAnything_files/ifttt.png" class="subicon" onclick="search(this)"><p class="subname">IFTTT</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="uncyclopedia" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/uncyclopedia.png" class="subicon" onclick="search(this)"><p class="subname">伪基百科</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="stumbleupon" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/stumbleupon.png" class="subicon" onclick="search(this)"><p class="subname">StumbleUpon</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="forvo" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/forvo.png" class="subicon" onclick="search(this)"><p class="subname">Forvo</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="wikiquote" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wikiquote.png" class="subicon" onclick="search(this)"><p class="subname">Wikiquote</p>
+    </div><div class="sub" style="cursor: pointer;">
+    <img id="wiktionary" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/wiktionary.png" class="subicon" onclick="search(this)"><p class="subname">Wiktionary</p>
+    </div><div class="sub" style="cursor: pointer;">
+		<img id="qiushibaike" src="./AnywhereAnything_files/grey.gif" data-original="http://77g2kh.com1.z0.glb.clouddn.com/qiushibaike.png" class="subicon" onclick="search(this)"><p class="subname">糗事百科</p>
+		</div></div></div>
+		
+
+
+<div class="catalog">
+		<p class="catalogname"></p>
+		<script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- aa -->
+<ins class="adsbygoogle" style="display:inline-block;width:160px;height:342px" data-ad-client="ca-pub-1716929933811539" data-ad-slot="6368163206"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	</div>
+
+	</div>
+
+
+
+	<div class="foot">
+	<div class="about">
+			<p>AnywhereAnything 是为了把 webOS 的 Just Type 搬上 web 而做的，并进行了本地化。<br>
+			仍在不断添砖加瓦，因为我每日的工作生活已经离不开AA了。<br>
+			(请在桌面电脑使用)<br><br>
+			感谢 Ellic、Seevii、John Xiao、Lila、Baiiiiiiii、<a href="http://rayps.com/" target="_blank">Ray</a>、Raincle 的无私帮助。<br>
+				
+			<br>
+			</p>
+	</div>
+
+
+
+
+<!-- 留言板 disqus -->
+<div id="comment_box"><a href="http://lackar.com/aa/#" class="comment">留言区↓</a> ...... <b>优秀留言</b>:“已设为主页 谢谢作者的辛苦付出” by Edd1e</div>
+<div id="disqus_thread"><iframe id="dsq-app4098" name="dsq-app4098" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./AnywhereAnything_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 31097px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="indicator-north" name="indicator-north" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 0px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 0px !important; max-width: 0px !important; position: fixed !important; z-index: 2147483646 !important; height: 21px !important; min-height: 21px !important; max-height: 21px !important; display: none !important;" src="./AnywhereAnything_files/saved_resource(4).html"></iframe><iframe id="indicator-south" name="indicator-south" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 0px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 0px !important; max-width: 0px !important; position: fixed !important; z-index: 2147483646 !important; height: 21px !important; min-height: 21px !important; max-height: 21px !important; display: none !important;" src="./AnywhereAnything_files/saved_resource(5).html"></iframe></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'anywhereanything'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the &lt;a href="<a class="vglnk" href="http://disqus.com/?ref_noscript" rel="nofollow"><span>http</span><span>://</span><span>disqus</span><span>.</span><span>com</span><span>/?</span><span>ref</span><span>_</span><span>noscript</span></a>"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
+    
+
+
+<div class="copyright">
+<p>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<br>
+帮助我们创造令所有人获益的产品，<a href="http://77g2kh.com1.z0.glb.clouddn.com/donateaa.png" target="_blank">捐助我们</a><br>
+I want an Aston Martin Vanquish. <a href="http://77g2kh.com1.z0.glb.clouddn.com/donateaa.png" target="_blank">Donate us</a>.<br>
+誰もが利益を得るように、私たちは製品を作成することをお手伝い，<a href="http://77g2kh.com1.z0.glb.clouddn.com/donateaa.png" target="_blank">寄付する</a><br><br>
+© AnywhereAnything<br> 
+			Since 2012<br> <br> 
+			</p>
+			</div>
+		</div>
+	<div class="share">
+		<script id="_wau6ft">var _wau = _wau || [];
+			_wau.push(["colored", "kdjfbmj3ydcn", "6ft", "00b388000000"]);
+			(function() {var s=document.createElement("script"); s.async=true;
+			s.src="http://widgets.amung.us/colored.js";
+			document.getElementsByTagName("head")[0].appendChild(s);})();
+		</script><div title="Click to see what&#39;s popular on this site!" style="position: relative; display: inline-block; background-image: url(&quot;http://widgets.amung.us/colwid/?c=00b388000000&quot;); width: 81px; height: 29px; padding: 0px; overflow: hidden; cursor: pointer; direction: ltr;"><div style="position: absolute; top: 7px; padding: 0px; margin: 0px; overflow: visible; left: 36px;"><div style="background-image: url(&quot;http://widgets.amung.us/colwid/?c=00b388000000&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: -50px -29px; position: absolute; width: 8px; height: 14px; left: 0px; line-height: 14px; overflow: hidden; padding: 0px; margin: 0px;"></div><div style="background-image: url(&quot;http://widgets.amung.us/colwid/?c=00b388000000&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: -90px -29px; position: absolute; width: 9px; height: 14px; left: 10px; line-height: 14px; overflow: hidden; padding: 0px; margin: 0px;"></div></div></div>
+
+		<script type="text/javascript" charset="utf-8">
+		(function(){
+		  var _w = 86 , _h = 16;
+		  var param = {
+		    url:location.href,
+		    type:'6',
+		    count:'', /**是否显示分享数，1显示(可选)*/
+		    appkey:'', /**您申请的应用appkey,显示分享来源(可选)*/
+		    title:'', /**分享的文字内容(可选，默认为所在页面的title)*/
+		    pic:'', /**分享图片的路径(可选)*/
+		    ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
+		    language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+		    dpc:1
+		  }
+		  var temp = [];
+		  for( var p in param ){
+		    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+		  }
+		  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://service.weibo.com/staticjs/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+		})()
+		</script><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./AnywhereAnything_files/weiboshare.html" width="86" height="16"></iframe>
+
+		<a href="javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:&#39;&#39;,r=&#39;http://www.douban.com/recommend/?url=&#39;+e(d.location.href)+&#39;&amp;title=&#39;+e(d.title)+&#39;&amp;sel=&#39;+e(s)+&#39;&amp;v=1&#39;,x=function(){if(!window.open(r,&#39;douban&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r+&#39;&amp;r=1&#39;};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()"><img src="http://img2.douban.com/pics/fw2douban1.png" alt="推荐到豆瓣"></a>
+
+		
+		</div>
+
+
+
+<script src="./AnywhereAnything_files/jquery.min.js.下载"></script>
+<script src="./AnywhereAnything_files/lazyload.min.js.下载"></script>
+<script type="text/javascript" src="./AnywhereAnything_files/open_link.js.下载"></script>
+<script type="text/javascript" src="./AnywhereAnything_files/min.js.下载"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2562693-7', 'lackar.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<iframe style="display: none;" src="./AnywhereAnything_files/saved_resource(6).html"></iframe></body></html>
