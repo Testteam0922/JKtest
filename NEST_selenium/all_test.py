@@ -21,7 +21,8 @@ def createSuiteone():    #按顺序执行
 #								'test_agent_login.py',
 #								'test_agent_create_Merchant.py',
 #								'test_merchant_login.py',
-								'test_merchant_create_Coupon.py'
+#								'test_merchant_create_Coupon.py',
+								'test_LLF_login.py'
 							]:
 		testunit.addTest(discover(allcase, pattern = casefile ,top_level_dir = None))
 

@@ -17,6 +17,9 @@ agent_login_passwd = "123456"
 merchant_login_name = "095merchant"
 merchant_login_passwd = "123456"
 
+llf_login_name = "095llf"
+llf_login_passwd = "123456"
+
 
 release_admin_login_name = ""
 release_admin_login_passwd = ""
