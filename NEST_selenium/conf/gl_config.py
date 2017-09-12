@@ -14,6 +14,15 @@ agent_login_name = "yshxa"
 agent_login_passwd = "123456"
 
 
-merchant_login_name = "merchant_quan"
+merchant_login_name = "095merchant"
 merchant_login_passwd = "123456"
 
+
+release_admin_login_name = ""
+release_admin_login_passwd = ""
+
+release_agent_login_name = "yshxa"
+release_agent_login_passwd = "123456"
+
+release_merchant_login_name = "095merchant"
+release_merchant_login_passwd = "123456"
