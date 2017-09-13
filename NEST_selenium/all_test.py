@@ -24,7 +24,8 @@ def createSuiteone():    #按顺序执行
 #								'test_merchant_create_Coupon.py',
 #								'test_LLF_login.py',
 #								'test_admin_add_hitaCard.py',
-								'test_admin_add_hitaCard_batch.py'
+#								'test_admin_add_hitaCard_batch.py',
+								'test_admin_add_hdSN.py'
 							]:
 		testunit.addTest(discover(allcase, pattern = casefile ,top_level_dir = None))
 
