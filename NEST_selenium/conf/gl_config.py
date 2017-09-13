@@ -5,6 +5,8 @@ pic_path = "C:\\Users\\Administrator\\.jenkins\\workspace\\hipaySelenium\\hipay\
 #case_pic_path = "C:\\Users\\Administrator\\.jenkins\\workspace\\hipaySelenium\\hipay\\fail_case_pic\\"
 case_pic_path = "D:\\JiaoBenTest\\NEST_selenium\\fail_case_pic\\"
 
+card_file = "D:\\GITProjects\\OneMore\\NEST_selenium\\test_data\\batch_add_tourist_file\\c_hita_card_sample.xlsx"
+
 login_addr = "http://hita-test.counect.com/nest/index.php"
 
 admin_login_name = "admin"
