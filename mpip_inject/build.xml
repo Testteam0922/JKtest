@@ -1,0 +1,15 @@
+﻿<?xml version ="1.0" encoding="UTF-8"?>
+<project name="TS_inject_ant" default="clean" basedir=".">
+    <description>ANT for TS Inject Tool!</description>
+    <target name="run">
+        <exec executable="python" failonerror="true">
+            <arg value="all_test.py" />
+        </exec>
+    </target>
+
+    <target name="clean">
+		<delete includeEmptyDirs="true"> 
+       		<fileset dir="." includes="**/*.pyc" /> 
+		</delete>       	
+    </target>
+</project>
