@@ -17,7 +17,7 @@ from tools.req import *
 class appWeb_movement_pay_query(unittest.TestCase):
 	# 读取文件
 	data_file = '.\\test_data\\appWeb_movement_pay_query.xlsx'
-	url = "http://103.36.132.29:8080/mpip-gateway/query/orderquery"
+	url = ""
 	datalist = file_read.excel_table_value(filepath = data_file)
 	data_key = ['mch_id','agent_id','v','timestamp','mch_trade_no','mpip_no','third_no','sign_type']
 

@@ -16,7 +16,7 @@ from tools.req import *
 class appWeb_movement_refund_query(unittest.TestCase):
 	# 读取文件
 	data_file = '.\\test_data\\appWeb_movement_refund_query.xlsx'
-	url = "http://103.36.132.29:8080/mpip-gateway/query/refundquery"
+	url = ""
 	datalist = file_read.excel_table_value(filepath = data_file)
 	data_key = ['mch_id','agent_id','v','timestamp','access_way','mch_refund_no','mpip_refund_no','sign_type']
 	
