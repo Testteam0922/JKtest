@@ -1,0 +1,8 @@
+Jmeter学习记录
+	1、jmeter介绍，安装，https://www.jianshu.com/p/f7778934c107
+			    https://www.cnblogs.com/yangxia-test/p/3964881.html
+	2、使用jmeter进行http接口性能测试，https://www.cnblogs.com/star91/p/5059222.html
+	3、
+
+
+Selenium + TestNG + eclipse 自动化测试框架搭建：https://www.cnblogs.com/zzxblogs/p/7814663.html
