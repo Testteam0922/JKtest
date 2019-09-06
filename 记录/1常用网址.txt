@@ -1,0 +1,4 @@
+
+Selenium包下载地址：http://selenium-release.storage.googleapis.com/index.html
+
+ChromeDriver下载地址:http://chromedriver.storage.googleapis.com/index.html
